@@ -1,0 +1,7 @@
+FROM alpine
+
+RUN apk update && apk add bash && apk add git 
+
+WORKDIR /home/app/
+
+RUN git clone https://github.com/reksar3364/splab1.git && cd splab1 && chmod ugo+xs script21.sh
