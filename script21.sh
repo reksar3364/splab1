@@ -21,7 +21,7 @@ do
 	then 
 		echo "введите мин время жизни"
 		read min
-		passwd -n $min $imya
+		passwd --mindays $min $imya
 	else 
 		if [[ $raketa = 2 ]]
 		then 
@@ -35,7 +35,7 @@ do
 					echo "выберите число побольше"
 				fi
 			done
-			passwd -x $max $imya
+			passwd --maxdays $max $imya
 		else 
 			if [[ $raketa = 3 ]]
 			then
